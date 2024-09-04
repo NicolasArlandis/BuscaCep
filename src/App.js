@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import "./styles.css";
 import api from "./services/api";
+import NightModeSwitch from "./NightModeSwitch";
 
 function App() {
   const [input, setInput] = useState("");
@@ -50,6 +51,7 @@ function App() {
           </span>
         </main>
       )}
+      <NightModeSwitch />
     </div>
   );
 }

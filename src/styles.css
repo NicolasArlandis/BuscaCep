@@ -1,109 +1,168 @@
-.conteiner{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: linear-gradient(#121212, #212b46)
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: background 0.3s;
 }
 
-.title{
-    font-size: 5.31rem;
-    color: #fff;
-    animation: flipTitle 2s;
+.conteiner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(#9be0ee, #4732bafb);
+  transition: background 0.3s;
+}
+
+.conteiner.night-mode {
+  background: linear-gradient(#121212, #212b46);
+}
+
+.title {
+  font-size: 5.31rem;
+  color: #fff;
+  animation: flipTitle 2s;
 }
 
 @keyframes flipTitle {
-    from{
-        transform: rotateX(90deg);
-    }
-    to{
-        transform: rotateX(0deg);
-    }
-    
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
 }
 
-.containerInput{
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 15px;
-    margin: 34px 0;
-    display: flex;
-    border-radius: 8px;
-    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5)
-    darkblue;
-    
+.containerInput {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  margin: 34px 0;
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5) darkblue;
 }
 
-
-.containerInput input{
-    background-color: transparent;
-    border: 0;
-    font-size: 20px;
-    color: #fff;
-    outline: none;
-    margin-right: 8px;
+.containerInput input {
+  background-color: transparent;
+  border: 0;
+  font-size: 20px;
+  color: #fff;
+  outline: none;
+  margin-right: 8px;
 }
 
-.containerInput input::placeholder{
-    color: #f1f1f1;
+.containerInput input::placeholder {
+  color: #f1f1f1;
 }
 
-::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
-    -webkit-appearance: none;
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
-.input[type=number]{
-    -moz-appearance: textfield;
+.input[type="number"] {
+  -moz-appearance: textfield;
 }
 
-.buttonSearch{
-    background-color: transparent;
-    border: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.5s;
+.buttonSearch {
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.5s;
 }
 
-.buttonSearch:hover{
-    transform: scale(1.3);
+.buttonSearch:hover {
+  transform: scale(1.3);
 }
 
-.main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #ffffff;
-    width: 500px;
-    border-radius: 8px;
-    animation: flipTitle 1s;
+.main {
+    color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 500px;
+  border-radius: 8px;
+  animation: flipTitle 1s;
+  
 }
 
-.main h2{
-    margin: 16px 0;
-    font-size: 39px;
+.main h2 {
+  margin: 16px 0;
+  font-size: 39px;
+  color: black;
 }
 
-.main span{
-    margin-bottom: 16px;
-    font-weight: bold;
+.main span {
+  margin-bottom: 16px;
+  font-weight: bold;
+  color: black;
+  padding: 0 15px;
+  text-align: center;
 }
 
-@media (max-width:620px){
-    .title {font-size: 60px;
-    }
+@media (max-width: 620px) {
+  .title {
+    font-size: 60px;
+  }
 
-    .main h2{
-        font-size: 28px;
+  .main h2 {
+    font-size: 28px;
+  }
 
-    }
+  .main {
+    width: 80%;
+    min-height: 250px;
+  }
+}
 
-    .main {
-        width: 80%;
-        min-height: 250px;
-    }
+body {
+  background: linear-gradient(#c4c2c2, #5a0432);
+  transition: background 0.3s;
+}
 
+body.night-mode {
+  background: linear-gradient(#000000, #1a1a2e);
+}
 
-    }
+.night-mode-button {
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #121212;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.night-mode-button:hover {
+  background-color: #121212;
+  color: #f1f1f1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.night-mode-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+body.night-mode .night-mode-button {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.night-mode .night-mode-button:hover {
+  background-color: #f1f1f1;
+  color: #121212;
+}
